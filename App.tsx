@@ -1,11 +1,35 @@
 import * as React from 'react';
-import './style.css';
+import { Player } from '@lottiefiles/react-lottie-player';
+import { PlayerEvent } from '@lottiefiles/react-lottie-player/dist/src/Player';
 
-export default function App() {
+const handleEventPlayer(e:PlayerEvent)=>{
+
+  if(event==='load')
+  alert('Lottie-load');
+
+
+}
+
+
+export const App = () => {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="container">
+      <h1>A maid on her way to serve the dish!</h1>
+
+      <Player
+        src="https://assets8.lottiefiles.com/packages/lf20_pkghem0h.json"
+        className="player"
+        loop
+        autoplay
+        speed={1}
+        background=""
+        direction={1}
+        style={{ width: '60', height: '60' }}
+        onEvent={handleEventPlayer}
+
+      />
     </div>
   );
-}
+};
+
+export default App;
