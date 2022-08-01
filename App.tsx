@@ -12,6 +12,27 @@ export const App = () => {
   return (
     <div className="container">
       <h1>A maid on her way to serve the dish!</h1>
+         
+
+         <div className="container">
+          
+          <button>
+            </button>
+          
+
+
+
+
+
+           </div>
+
+
+
+
+
+
+
+
 
       <Player
         src="https://assets8.lottiefiles.com/packages/lf20_pkghem0h.json"
