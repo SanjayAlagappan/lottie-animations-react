@@ -1,6 +1,16 @@
-h1, p {
+h1,
+p {
   font-family: Lato;
 }
 
-
-
+.container button {
+  padding: 12px;
+  background-color: rgb(120, 228, 19);
+  border: none;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+.container button:hover {
+  background-color: crimson;
+  color: whitesmoke;
+}

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { PlayerEvent } from '@lottiefiles/react-lottie-player/dist/src/Player';
+import './style.css';
 
 export const App = () => {
   const handleEventPlayer = (e: PlayerEvent) => {
