@@ -3,19 +3,43 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import { PlayerEvent } from '@lottiefiles/react-lottie-player/dist/src/Player';
 
 export const App = () => {
-  // const handleEventPlayer = (e: PlayerEvent) => {
-  //   if (e === 'load') alert('Lottie-load');
-  // };
+  const handleEventPlayer = (e: PlayerEvent) => {
+    if (e === 'load') alert('Lottie-load');
+  };
 
   const Playerref = React.useRef<Player>(null);
-  const [pause,setpause]
+  const [toggle, setToggle] = React.useState(true);
+  const [action, setAction] = React.useState(false);
+
   return (
     <div className="container">
       <h1>A maid on her way to serve the dish!</h1>
 
       <div className="container">
-        <button>Play</button>
-        <button>Pause</button>
+        {toggle && (
+          <button
+            onClick={() => {
+              Playerref.current.pause();
+
+              setAction(true);
+              setToggle(false);
+            }}
+          >
+            Stop her!
+          </button>
+        )}
+
+        {action && (
+          <button
+            onClick={() => {
+              Playerref.current.play();
+              setToggle(true);
+              setAction(false);
+            }}
+          >
+            Let her walk!
+          </button>
+        )}
       </div>
 
       <Player
