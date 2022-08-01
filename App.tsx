@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { PlayerEvent } from '@lottiefiles/react-lottie-player/dist/src/Player';
 
-const handleEventPlayer(e:PlayerEvent)=>{
+const handleEventPlayer=(e:PlayerEvent)=>{
 
-  if(event==='load')
+  if(e==='load')
   alert('Lottie-load');
 
 
